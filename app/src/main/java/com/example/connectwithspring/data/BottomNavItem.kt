@@ -1,4 +1,4 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.data
 
 import com.example.connectwithspring.R.*
 

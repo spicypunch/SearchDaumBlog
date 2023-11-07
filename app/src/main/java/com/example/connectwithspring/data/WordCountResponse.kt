@@ -1,4 +1,4 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.data
 
 class WordCountResponse : ArrayList<WordCountResponse.WordCountResponseItem>() {
     data class WordCountResponseItem(

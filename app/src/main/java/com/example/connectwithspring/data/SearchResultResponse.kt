@@ -1,4 +1,4 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.data
 
 data class SearchResultResponse(
     val documents: List<Document>,

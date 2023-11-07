@@ -1,4 +1,7 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.repository
+
+import com.example.connectwithspring.data.SearchResultResponse
+import com.example.connectwithspring.data.WordCountResponse
 
 interface GetSearchRepository {
     suspend fun getSearchRepository(
