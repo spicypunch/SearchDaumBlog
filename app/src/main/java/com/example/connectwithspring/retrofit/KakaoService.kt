@@ -1,5 +1,7 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.retrofit
 
+import com.example.connectwithspring.data.SearchResultResponse
+import com.example.connectwithspring.data.WordCountResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

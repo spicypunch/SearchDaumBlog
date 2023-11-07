@@ -1,4 +1,4 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -12,18 +12,18 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.connectwithspring.ViewModel
+import com.example.connectwithspring.data.BottomNavItem
 import com.example.connectwithspring.ui.theme.ConnectWithSpringTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -84,20 +84,12 @@ fun App() {
         Box(modifier = Modifier.padding(it)) {
             NavHost(navController = navController, startDestination = BottomNavItem.Search.route) {
                 composable(route = BottomNavItem.Search.route) {
-                    SearchScreen(navController, viewModel)
+                    SearchScreen(viewModel)
                 }
                 composable(route = BottomNavItem.Ranking.route) {
-                    RankingScreen(navController, viewModel)
+                    RankingScreen(viewModel)
                 }
             }
         }
-    }
-}
-
-@Preview
-@Composable
-fun AppPreview() {
-    ConnectWithSpringTheme {
-        App()
     }
 }

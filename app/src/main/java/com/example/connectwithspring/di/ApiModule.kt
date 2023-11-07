@@ -1,5 +1,6 @@
-package com.example.connectwithspring
+package com.example.connectwithspring.di
 
+import com.example.connectwithspring.retrofit.KakaoService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,7 +12,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiModule {
-    private const val BASE_URL = "http://localhost:8080/"
+    private const val BASE_URL = "http://223.130.163.223:8080/"
 
     @Singleton
     @Provides
